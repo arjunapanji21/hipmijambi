@@ -62,9 +62,9 @@
                 <div class="mb-2">
                     <label for="slug" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Slug</label>
-                    <input type="text" name="slug" id="slug"
+                    <input readonly type="text" name="slug" id="slug"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="Add post slug">
+                        placeholder="">
                 </div>
                 <div class="mb-2">
                     <label for="excerpt" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -105,7 +105,7 @@
                                         class="font-semibold">Click to upload</span> or drag and drop</p>
                                 <p class="text-xs text-gray-500 dark:text-gray-400">JPG (MAX. 800x400px)</p>
                             </div>
-                            <input id="featured-image" type="file" class="hidden" />
+                            <input id="featuredImage" type="file" class="hidden" />
                         </label>
                     </div>
 
@@ -126,8 +126,19 @@
 
 @section('script')
 <script type="module">
+    $("#title").change(function () {
+        $("#slug").val(this.value.toLowerCase().replace(/\s+/g, '-'));
+    });
+
     $("#btnDraft").click(function () {
-        console.log("Draft");
+        var title = $("#title").val();
+        var content = tinymce.get('editor').getContent();
+        var slug = $("#slug").val();
+        var excerpt = $("#excerpt").val();
+        var category = $("#category").val();
+        var tags = $("#tags").val();
+        var featuredImage = $("#featuredImage").val();
+        console.log(category);
     });
     $("#btnPublish").click(function () {
         console.log("Publish");
