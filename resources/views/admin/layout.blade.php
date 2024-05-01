@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard | HIPMI JAMBI</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
+    @yield('head')
 </head>
 <body class="">
     <div class="antialiased bg-gray-50 dark:bg-gray-900">

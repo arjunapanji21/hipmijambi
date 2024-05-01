@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,7 +14,10 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
     public function create_draft(Request $request){
-        return redirect(route('admin.posts.index'))->with('success', "Post has been saved in draft");
+        $data = $request->all();
+        Post::create($data);
+        return "success";
+        // return redirect(route('admin.posts.index'))->with('success', "Post has been saved in draft");
     }
     public function create_publish(Request $request){
         dd($request->all());
