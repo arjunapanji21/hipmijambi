@@ -49,7 +49,7 @@
               </button>
               <a href="#" class="flex items-center justify-between mr-4">
                 <img
-                  src="{{asset('images/logo_hipmi.png')}}"
+                  src="{{asset('images/logo_hipmi.webp')}}"
                   class="mr-3 h-8"
                   alt="HIPMI Logo"
                 />
