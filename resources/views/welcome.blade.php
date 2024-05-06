@@ -86,7 +86,7 @@
     </header>
 
     <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-hidden lg:relative">
-        <div class="lg:absolute py-8 px-4 mx-auto max-w-screen-2xl sm:py-40 lg:px-6 z-10">
+        <div class="lg:absolute py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:py-40 lg:px-6 z-10">
             <div class="my-auto lg:w-1/2 px-4 lg:px-8 z-10">
                 <a href="{{route('login')}}"
                     class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
