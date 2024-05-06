@@ -85,7 +85,7 @@
         </nav>
     </header>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-x-hidden lg:relative">
+    <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-hidden lg:relative">
         <div class="hidden lg:flex lg:absolute z-0 w-full h-full skew-x-[25deg] overflow-hidden translate-x-[50%]">
             <img src="{{asset('images/cover.webp')}}" class="w-full h-full -skew-x-[25deg] -translate-x-[50%] object-cover" alt="">
         </div>
