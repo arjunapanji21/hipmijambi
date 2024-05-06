@@ -86,9 +86,6 @@
     </header>
 
     <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-hidden lg:relative">
-        <div class="hidden lg:flex lg:absolute z-0 w-full h-full skew-x-[25deg] overflow-hidden translate-x-[50%]">
-            <img src="{{asset('images/cover.webp')}}" class="w-full h-full -skew-x-[25deg] -translate-x-[50%] object-cover" alt="">
-        </div>
         <div class="lg:absolute py-8 px-4 mx-auto max-w-screen-2xl sm:py-40 lg:px-6 z-10">
             <div class="my-auto lg:w-1/2 px-4 lg:px-8 z-10">
                 <a href="{{route('login')}}"
@@ -120,6 +117,9 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="lg:absolute z-0 w-full h-full lg:skew-x-[25deg] overflow-hidden lg:translate-x-[50%]">
+            <img src="{{asset('images/cover.webp')}}" class="w-full h-full lg:-skew-x-[25deg] lg:-translate-x-[50%] object-cover" alt="">
         </div>
     </section>
 
