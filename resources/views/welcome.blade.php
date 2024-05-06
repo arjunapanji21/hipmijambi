@@ -11,7 +11,8 @@
 
 </head>
 
-<body>
+<body class="m-0">
+
     <header class="sticky top-0 z-50">
         <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
             <div class="flex flex-wrap justify-between items-center mx-auto w-full max-w-screen-2xl ">
@@ -84,7 +85,7 @@
         </nav>
     </header>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900 lg:relative">
+    <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-x-hidden lg:relative">
         <div class="hidden lg:flex lg:absolute z-0 w-full h-full skew-x-[25deg] overflow-hidden translate-x-[50%]">
             <img src="{{asset('images/cover.webp')}}" class="w-full h-full -skew-x-[25deg] -translate-x-[50%] object-cover" alt="">
         </div>
@@ -216,6 +217,7 @@
             </div>
         </div>
     </section>
+
     <section class="min-h-screen bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
             <div class="grid lg:grid-cols-2 gap-5 items-center">
@@ -269,9 +271,7 @@
         </div>
     </section>
 
-    
-
-    <section class="min-h-screen bg-primary-700 dark:bg-primary-900 lg:relative">
+    <section class="min-h-screen bg-primary-700 dark:bg-primary-900 w-full overflow-x-hidden lg:relative">
         <div class="hidden lg:flex lg:absolute z-0 w-full h-full -skew-x-[25deg] overflow-hidden translate-x-[45%]">
             <img src="{{asset('images/cover.webp')}}" class="w-full h-full blur skew-x-[25deg] -translate-x-96 object-cover" alt="">
         </div>
@@ -434,6 +434,15 @@
                     <h2 class="mb-4 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-100 dark:text-white md:text-4xl">Keanggotaan HIPMI Jambi</h2>
                     <p class="mb-2 lg:mb-4 text-gray-100 text-lg lg:text-xl dark:text-white">Kembangkan usahamu dengan memperluas jejaring dan koneksi melalui HIPMI.</p>
                     <p class="mb-2 lg:mb-4 text-gray-100 text-lg lg:text-xl dark:text-white">Dengan terdaftar sebagai anggota HIPMI, Anda akan memiliki kesempatan untuk terlibat dalam usaha-usaha organisasi memajukan ekosistem perekonomian nasional.</p>
+                    <a href="{{route('login')}}"
+                            class="my-4 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                            Join Sekarang
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="ml-2 w-4 h-4"
+                                fill="currentColor">
+                                <path
+                                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+                            </svg>
+                        </a>
                 </div>
                 <div class="bg-white py-4 px-2 rounded-lg">
                     <img src="https://jambi.ut.ac.id/v2/images/mitra.webp" alt="">
