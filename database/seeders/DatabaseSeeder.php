@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\PostCategory;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,9 +16,17 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::create([
+            'name' => 'Admin',
+            'username' => 'admin',
+            'password' => bcrypt('rahasia'),
+            'role' => 'admin',
+            'email' => 'admin@hipmijambi.org',
+            'tgl_lahir' => '1990-01-01'
+        ]);
+
+        PostCategory::create([
+            'name' => 'Uncategorized',
         ]);
     }
 }

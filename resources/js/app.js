@@ -11,6 +11,10 @@ import 'tinymce/models/dom/model';
 import jQuery from 'jquery';
 window.$ = jQuery;
 
+import select2 from 'select2';
+import "/node_modules/select2/dist/css/select2.css";
+select2();
+
 // .. After imports init TinyMCE ..
 window.addEventListener('DOMContentLoaded', () => {
     tinymce.init({

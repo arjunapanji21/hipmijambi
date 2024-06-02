@@ -44,6 +44,7 @@
             </ol>
         </nav>
     </div>
+
     <h2 id="test" class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add New Post</h2>
 
     <div class="bg-white p-4 rounded-lg dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
@@ -78,18 +79,15 @@
                         placeholder="Add post excerpt" required></textarea>
                 </div>
                 <div class="mb-2">
-                    <label for="category"
+                    <label for="post_category_id"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                    <select id="category"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                        <option selected="Uncategorized">Uncategorized</option>
+                    <select id="post_category_id" name="post_category_id"
+                        class="select2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option disabled>Post category:</option>
+                        @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        @endforeach
                     </select>
-                </div>
-                <div class="mb-2">
-                    <label for="tags" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tags</label>
-                    <input type="text" name="tags" id="tags"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="#example #news #trending">
                 </div>
                 <div class="mb-2">
                     <label for="featured-image"
@@ -130,7 +128,10 @@
 
 @section('script')
 <script type="module">
-    $("#title").change(function () {
+    $(document).ready(function () {
+        $(".select2").select2();
+
+        $("#title").change(function () {
         $("#slug").val(this.value.toLowerCase().replace(/\s+/g, '-'));
     });
 
@@ -139,8 +140,7 @@
         var content = tinymce.get('editor').getContent();
         var slug = $("#slug").val();
         var excerpt = $("#excerpt").val();
-        var category = $("#category").val();
-        var tags = $("#tags").val();
+        var post_category_id = $("#post_category_id").val();
         var featuredImage = $("#featuredImage").val();
 
         var formData = {
@@ -148,15 +148,12 @@
             "content" : content,
             "slug" : slug,
             "excerpt" : excerpt,
-            "category" : category,
-            "tags" : tags,
+            "post_category_id" : post_category_id,
             "featuredImage" : featuredImage,
         };
 
         // append csrf token to formData
         formData._token = $('meta[name="csrf-token"]').attr('content');
-
-        console.log(formData);
 
         $.ajax({
             url: '{{route("admin.posts.create.draft")}}',
@@ -166,15 +163,51 @@
             },
             data: formData,
             success: function(response){
-                console.log(response);
+                alert(response.msg);
+                window.location.href = "{{route('admin.posts.index')}}";
             },
             error: function(xhr, status, error){
                 console.error(xhr.responseText);
             }
         });
     });
+
     $("#btnPublish").click(function () {
-        console.log("Publish");
+        var title = $("#title").val();
+        var content = tinymce.get('editor').getContent();
+        var slug = $("#slug").val();
+        var excerpt = $("#excerpt").val();
+        var post_category_id = $("#post_category_id").val();
+        var featuredImage = $("#featuredImage").val();
+
+        var formData = {
+            "title" : title,
+            "content" : content,
+            "slug" : slug,
+            "excerpt" : excerpt,
+            "post_category_id" : post_category_id,
+            "featuredImage" : featuredImage,
+        };
+
+        // append csrf token to formData
+        formData._token = $('meta[name="csrf-token"]').attr('content');
+
+        $.ajax({
+            url: '{{route("admin.posts.create.publish")}}',
+            type: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': formData._token
+            },
+            data: formData,
+            success: function(response){
+                alert(response.msg);
+                window.location.href = "{{route('admin.posts.index')}}";
+            },
+            error: function(xhr, status, error){
+                console.error(xhr.responseText);
+            }
+        });
+    });
     });
 </script>
 @endsection

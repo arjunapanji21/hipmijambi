@@ -17,12 +17,14 @@ return new class extends Migration
             $table->text('content');
             $table->string('slug');
             $table->text('excerpt')->nullable();
-            $table->string('category');
-            $table->string('tags')->nullable();
+            $table->integer('post_category_id');
             $table->text('featuredImage')->nullable();
-            $table->enum('status', ['Draft', 'Published']);
+            $table->enum('status', ['Draft', 'Publish']);
+            $table->enum('comment_status', ['Disabled', 'Enabled'])->default('Disabled');
             $table->integer('author_id');
+            $table->integer('views')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

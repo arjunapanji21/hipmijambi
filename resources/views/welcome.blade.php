@@ -79,47 +79,33 @@
                             <a href="#"
                                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
                         </li>
+                        <li class="md:hidden">
+                            <a href="{{route('login')}}"
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Masuk</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900 w-full overflow-hidden lg:relative">
-        <div class="lg:absolute py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:py-40 lg:px-6 z-10">
-            <div class="my-auto lg:w-1/2 px-4 lg:px-8 z-10">
-                <a href="{{route('login')}}"
-                    class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-                    role="alert">
-                    <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span
-                        class="text-sm font-medium">HIPMI Jambi menerima anggota baru..</span>
-                    <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                            clip-rule="evenodd"></path>
-                    </svg>
+    <section class="bg-white dark:bg-gray-900 flex flex-col justify-center items-center min-h-screen md:min-h-fit" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{{asset('images/hipmi2.webp')}}') fixed no-repeat center;">
+        <div class="py-8 px-4 mx-auto max-w-screen-2xl text-center lg:py-16 lg:px-12">
+            <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
+                <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">New</span> <span class="text-sm font-medium">HIPMI Jambi menerima anggota baru!</span> 
+                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </a>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-100 md:text-7xl lg:text-9xl dark:text-white">Bangkit Bersama HIPMI Jambi</h1>
+            <p class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-100">Bergabunglah bersama organisasi pengusaha muda terbesar di Indonesia.</p>
+            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    Tentang Kami
                 </a>
-                <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                    Himpunan Pengusaha Muda Indonesia</h1>
-                <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Organisasi pengusaha
-                    muda terbesar di Indonesia kini hadir di Jambi. Bergabung sekarang atau ketahui lebih lanjut tentang
-                    HIPMI Jambi.</p>
-                <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row  sm:space-y-0 sm:space-x-4">
-                    <a href="{{route('login')}}"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                        Gabung Sekarang
-                    </a>
-                    <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                        Tentang HIPMI
-                    </a>
-                </div>
+                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg bg-gray-100 border border-gray-300 hover:bg-gray-300 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                    Bergabung
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
             </div>
-        </div>
-        <div class="lg:absolute z-0 w-full h-full lg:skew-x-[25deg] overflow-hidden lg:translate-x-[50%]">
-            <img src="{{asset('images/cover.webp')}}" class="w-full h-full lg:-skew-x-[25deg] lg:-translate-x-[50%] object-cover" alt="">
         </div>
     </section>
 
@@ -140,20 +126,20 @@
                     <dd class="font-light text-gray-200 dark:text-white">Anggota</dd>
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <dt class="mb-2 text-3xl md:text-4xl font-extrabold">171</dt>
+                    <dt class="mb-2 text-3xl md:text-4xl font-extrabold">150+</dt>
                     <dd class="font-light text-gray-200 dark:text-white">Pengurus Inti</dd>
                 </div>
             </dl>
         </div>
     </section>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900">
+    <section class=" bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
             <div class="grid lg:grid-cols-2 gap-5 items-center">
                 <div class="grid grid-cols-2 gap-4 p-8 order-2 lg:order-1">
-                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt=""
+                    <img src="{{asset('images/hipmi5.webp')}}" alt=""
                         class="rounded-lg -translate-y-8">
-                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt=""
+                    <img src="{{asset('images/hipmi4.webp')}}" alt=""
                         class="rounded-lg translate-y-8">
                 </div>
                 <div class="order-1 lg:order-2">
@@ -185,7 +171,7 @@
         </div>
     </section>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900">
+    <section class=" bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
             <div class="grid lg:grid-cols-2 gap-5 items-center">
                 <div class="order-1">
@@ -211,14 +197,14 @@
                     </p>
                 </div>
                 <div class="order-2">
-                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt=""
+                    <img src="{{asset('images/hipmi1.webp')}}" alt=""
                         class="rounded-lg h-80 w-80 lg:h-[640px] lg:w-[480px] mx-auto object-cover mb-4">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="min-h-screen bg-white dark:bg-gray-900">
+    <section class=" bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-2xl lg:py-16 lg:px-6">
             <div class="grid lg:grid-cols-2 gap-5 items-center">
                 <div class="order-3 lg:order-4">
@@ -264,23 +250,20 @@
 
                 </div>
                 <div class="order-4 lg:order-3">
-                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt=""
+                    <img src="{{asset('images/hipmi3.webp')}}" alt=""
                         class="rounded-lg h-80 w-80 lg:h-[640px] lg:w-[480px] mx-auto object-cover mb-4">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="min-h-screen bg-primary-700 dark:bg-primary-900 w-full overflow-x-hidden lg:relative">
-        <div class="hidden lg:flex lg:absolute z-0 w-full h-full -skew-x-[25deg] overflow-hidden translate-x-[45%]">
-            <img src="{{asset('images/cover.webp')}}" class="w-full h-full blur skew-x-[25deg] -translate-x-96 object-cover" alt="">
-        </div>
-        <div class="lg:absolute py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6 z-10">
+    <section class=" bg-primary-700 dark:bg-primary-900 w-full overflow-hidden lg:relative" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('{{asset('images/hipmi1.webp')}}') fixed no-repeat center;">
+        <div class="py-8 px-4 mx-auto max-w-screen-2xl sm:py-16 lg:px-6 z-10">
             <div class="max-w-screen-md mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-100 dark:text-white">Jenis Usaha Anggota</h2>
                 <p class="text-gray-200 sm:text-xl dark:text-gray-400">Terdapat berbagai jenis usaha anggota Himpunan Pengusaha Muda Indonesia.</p>
             </div>
-            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-3 md:space-y-0">
                 <div class="bg-white dark:bg-gray-900 rounded-lg px-8 py-4 shadow-lg border border-primary-300">
                     <div
                         class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -370,65 +353,8 @@
         </div>
     </section>
 
-    <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div class="grid lg:grid-cols-2 items-center gap-4">
-                <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-                    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Berita</h2>
-                    <p class="font-light text-primary-600 sm:text-xl dark:text-primary-900">Cerita semua kegiatan tentang HIPMI Jambi.</p>
-                </div>
-                <div class="grid gap-8 max-h-screen overflow-y-auto">
-                    @for($i=0;$i<5;$i++)
-                    <article
-                        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                        <div class="flex justify-between items-center mb-5 text-gray-500">
-                            <span
-                                class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-                                <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z">
-                                    </path>
-                                </svg>
-                                Event
-                            </span>
-                            <span class="text-sm">14 days ago</span>
-                        </div>
-                        <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, amet?</a></h2>
-                        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis ipsam, id quidem quo quos quisquam? Magni, quibusdam nisi aspernatur rem nemo earum harum quas impedit accusamus laudantium veniam beatae quae!</p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center space-x-4">
-                                <img class="w-7 h-7 rounded-full"
-                                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-                                    alt="Jese Leos avatar" />
-                                <span class="font-medium dark:text-white">
-                                    Jese Leos
-                                </span>
-                            </div>
-                            <a href="#"
-                                class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline">
-                                Selengkapnya
-                                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </article>
-                    @endfor
-                    <a href="#"
-                        class="w-fit bg-primary-100 mx-auto text-primary-800 px-5 py-3 rounded-lg dark:bg-primary-200 dark:text-primary-800 shadow-lg">
-                        Berita Lainnya
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="bg-primary-700 dark:bg-primary-900">
-        <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+        <div class="py-8 lg:py-16 mx-auto max-w-screen-2xl px-4">
             <div class="grid lg:grid-cols-2 gap-10">
                 <div>
                     <h2 class="mb-4 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-100 dark:text-white md:text-4xl">Keanggotaan HIPMI Jambi</h2>
@@ -509,50 +435,49 @@
     </section>
 
     <footer class="bg-white dark:bg-gray-900 border-t">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-            <div class="md:flex md:justify-between gap-20">
-                <div class="mb-6 md:mb-0 flex flex-col lg:flex-row gap-10 lg:items-center">
-                    <a href="#" class="">
-                        <img src="{{asset('images/logo_hipmi.webp')}}" class="w-40 lg:border-r lg:border-r-primary-600 lg:pr-10" alt="HIPMI Logo" />
-                    </a>
-                    <div>
-                        <h3 class="max-w-md font-bold text-xl">
-                            Secretariat of the Regional Governing Body of the Indonesian Young Entrepreneurs Association Jambi
-                        </h3>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-10">
-                    <div>
-                        <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Address</h2>
-                        <ul>
-                            <li>
-                                Jalan Kutilang I RT. 02 No. 55, Jambi 36138 - INDONESIA
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
-                        <ul>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
-                                0812-3456-7890
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                                0812-3456-7890
-                            </li>
-                            <li class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                                sekretariat.hipmijambi@gmail.com
-                            </li>
-                        </ul>
-                    </div>
+        <div class="md:flex md:justify-between py-16 px-4 bg-gray-100">
+            <div class="mb-6 md:mb-0 flex flex-col lg:flex-row gap-10 lg:items-center">
+                <a href="#" class="">
+                    <img src="{{asset('images/logo_hipmi.webp')}}" class="w-40 lg:border-r lg:border-r-primary-600 lg:pr-10" alt="HIPMI Logo" />
+                </a>
+                <div>
+                    <h3 class="max-w-md font-bold text-xl mb-5">
+                        Secretariat of the Regional Governing Body of the Indonesian Young Entrepreneurs Association Jambi
+                    </h3>
                 </div>
             </div>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Address</h2>
+                    <ul>
+                        <li>
+                            Jalan Kutilang I RT. 02 No. 55, Jambi 36138 - INDONESIA
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-2 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
+                    <ul>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                            0812-3456-7890
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                            0812-3456-7890
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                            sekretariat.hipmijambi@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8 ">
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023-{{date('Y')}} <a
-                        href="#" class="hover:underline">hipmijambi.org</a>. All Rights Reserved.
+                        href="#" class="hover:underline hover:text-primary-600">hipmijambi.org</a> | supported by: <a href="https://arjunaprakarsa.com" class="hover:underline hover:text-primary-600" target="_blank">arjunaprakarsa.com</a>.
                 </span>
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
